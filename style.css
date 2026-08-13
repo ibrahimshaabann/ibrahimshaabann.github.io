@@ -10,6 +10,7 @@
   --chip-bg: #f0f1ee;
   --chip-border: #e2e3de;
   --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --display: 'Space Grotesk', 'Inter', -apple-system, sans-serif;
   --mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
   --maxw: 1080px;
   --pad: clamp(20px, 5vw, 40px);
@@ -43,7 +44,7 @@ a:focus-visible, button:focus-visible, .btn:focus-visible {
 .idx { font-family: var(--mono); font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--accent); }
 .label { font-family: var(--mono); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--text-2); }
 .sec-head { display: flex; align-items: baseline; gap: 12px; margin-bottom: clamp(24px, 4vw, 40px); }
-.sec-head h2 { font-size: clamp(22px, 3vw, 30px); letter-spacing: -.6px; font-weight: 680; }
+.sec-head h2 { font-family: var(--display); font-size: clamp(22px, 3vw, 30px); letter-spacing: -.6px; font-weight: 700; }
 
 /* ===== Navigation ===== */
 #nav { position: sticky; top: 0; z-index: 50; background: color-mix(in srgb, var(--surface) 88%, transparent); backdrop-filter: blur(8px); transition: border-color .3s; border-bottom: 1px solid transparent; }
@@ -62,26 +63,27 @@ a:focus-visible, button:focus-visible, .btn:focus-visible {
   .nav-toggle { display: flex; }
 }
 
-/* ===== Hero ===== */
-.hero { display: grid; grid-template-columns: 1fr 360px; gap: clamp(32px, 6vw, 72px); align-items: center; padding-top: clamp(40px, 8vw, 90px); }
-.hero-portrait { border-radius: 16px; overflow: hidden; border: 1px solid var(--hairline); background: var(--surface-2); }
-.hero-portrait img { width: 100%; height: 440px; object-fit: cover; object-position: 50% 28%; }
-@media (max-width: 820px) {
-  .hero { grid-template-columns: 1fr; }
-  .hero-portrait { order: -1; max-width: 300px; }
-  .hero-portrait img { height: 300px; }
+/* ===== Hero (centered network hub) ===== */
+#hero { position: relative; overflow: hidden; min-height: 88vh; display: flex; align-items: center; }
+.hero-net { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; }
+.hero { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; text-align: center; width: 100%; }
+.photo-node { position: relative; width: 168px; height: 168px; margin-bottom: 26px; display: grid; place-items: center; }
+.photo-node img { width: 156px; height: 156px; border-radius: 50%; object-fit: cover; object-position: 50% 22%; position: relative; z-index: 2; border: 3px solid var(--accent); box-shadow: 0 0 0 10px rgba(47,107,70,.08), 0 18px 50px -20px rgba(47,107,70,.35); background: var(--surface-2); }
+.pring { position: absolute; width: 156px; height: 156px; border-radius: 50%; border: 1.5px solid var(--accent); z-index: 1; }
+@media (prefers-reduced-motion: no-preference) {
+  .pring { animation: ring 3s ease-out infinite; }
+  .pring2 { animation-delay: 1.5s; }
 }
-.hero-title { font-size: clamp(38px, 5.4vw, 58px); line-height: 1.05; letter-spacing: -1.6px; font-weight: 680; margin: 16px 0 20px; }
-.hero-lead { font-size: clamp(15px, 2vw, 18px); color: var(--text-2); max-width: 52ch; }
-.tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 26px; }
-.tag { font-family: var(--mono); font-size: 12px; padding: 6px 11px; border-radius: 6px; background: var(--chip-bg); border: 1px solid var(--chip-border); color: var(--text-2); }
-.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+@keyframes ring { 0% { transform: scale(1); opacity: .5; } 100% { transform: scale(1.55); opacity: 0; } }
+.hero-title { font-family: var(--display); font-size: clamp(34px, 6vw, 60px); line-height: 1.03; letter-spacing: -1.6px; font-weight: 700; margin: 14px 0 10px; }
+.hero-lead { font-size: clamp(15px, 2vw, 19px); color: var(--text-2); }
+.hero-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 30px; }
 .btn { font-weight: 600; font-size: 14px; padding: 12px 22px; border-radius: 8px; transition: .2s; border: 1px solid transparent; }
 .btn-primary { background: var(--accent); color: #fff; }
 .btn-primary:hover { background: #245537; }
 .btn-ghost { border-color: var(--hairline); color: var(--text); }
 .btn-ghost:hover { border-color: var(--text); }
-.socials { display: flex; gap: 22px; margin-top: 30px; font-family: var(--mono); font-size: 13px; color: var(--text-2); }
+.socials { display: flex; justify-content: center; gap: 22px; margin-top: 28px; font-family: var(--mono); font-size: 13px; color: var(--text-2); }
 .socials a:hover { color: var(--accent); }
 
 /* ===== About ===== */
