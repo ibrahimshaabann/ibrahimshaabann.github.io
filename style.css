@@ -98,3 +98,15 @@ a:focus-visible, button:focus-visible, .btn:focus-visible {
 .xp-main li { position: relative; padding-left: 18px; font-size: 14.5px; color: var(--text-2); }
 .xp-main li::before { content: '—'; position: absolute; left: 0; color: var(--accent); }
 @media (max-width: 720px) { .xp-row { grid-template-columns: 1fr; gap: 10px; } }
+
+/* ===== Projects (03) ===== */
+.projects { display: grid; gap: 28px; }
+.proj { display: grid; grid-template-columns: 400px 1fr; gap: 28px; align-items: center; padding: 22px; border: 1px solid var(--hairline); border-radius: 14px; background: #fff; transition: box-shadow .25s, transform .25s; }
+.proj:hover { box-shadow: 0 10px 40px -20px rgba(0,0,0,.25); transform: translateY(-2px); }
+.proj-shot { border-radius: 10px; overflow: hidden; border: 1px solid var(--hairline); display: block; }
+.proj-shot img { width: 100%; height: 240px; object-fit: cover; object-position: top; }
+.proj-top { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px; }
+.proj-top h3 { font-size: 19px; font-weight: 600; letter-spacing: -.3px; }
+.proj-link { font-family: var(--mono); font-size: 12px; color: var(--accent); }
+.proj-body p { font-size: 14.5px; color: var(--text-2); margin: 10px 0 14px; }
+@media (max-width: 820px) { .proj { grid-template-columns: 1fr; } .proj-shot img { height: 200px; } }
