@@ -117,3 +117,12 @@ a:focus-visible, button:focus-visible, .btn:focus-visible {
 .stack-row:first-child { border-top: none; }
 .stack-row p { font-size: 15px; }
 @media (max-width: 620px) { .stack-row { grid-template-columns: 1fr; gap: 6px; } }
+
+/* ===== Contact (06) + footer ===== */
+.contact-lead { font-size: clamp(16px,2vw,19px); max-width: 46ch; margin-bottom: 26px; }
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; max-width: 640px; }
+.contact-card { display: flex; flex-direction: column; gap: 6px; padding: 16px 18px; border: 1px solid var(--hairline); border-radius: 10px; font-size: 14px; transition: border-color .2s; }
+.contact-card:hover { border-color: var(--accent); }
+.site-footer { border-top: 1px solid var(--hairline); padding: 28px 0; }
+.footer-inner { display: flex; align-items: center; justify-content: space-between; }
+@media (max-width: 620px) { .contact-grid { grid-template-columns: 1fr; } }
