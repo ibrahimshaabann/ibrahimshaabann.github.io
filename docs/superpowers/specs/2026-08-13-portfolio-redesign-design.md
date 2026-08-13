@@ -63,7 +63,7 @@ Light, editorial, premium — "Direction A" from the visual brainstorm. Same des
 **`03` Projects** — cards with real screenshots (captured to `assets/projects/`), description, tech, live link + role:
 - **Aleem Educational Platform** — `aleem.png` → aleemgames.com. Multi-tenant SaaS LMS, RBAC (admin/teacher/student), PayPal subscription billing, admin dashboards. Django · PostgreSQL · Docker · DigitalOcean · Nginx · CI/CD.
 - **SHMAID — Shaalan's Humanitarian Medical Aid** — `shmaid.png` → shmaid.org. Full-stack donation + medical-aid platform, PayPal donation flows, aid-request workflows, role-based admin. React · Django · PostgreSQL · Contabo · CI/CD.
-- **Dr. Zakaria Academy** — `zakaria.png` → dr-zakaria.com. Courses/learning platform (accounting, finance & statistics). (Role: backend/full-stack — confirm one-line description.)
+- **Dr. Zakaria Academy** — `zakaria.png` → dr-zakaria.com. Full-stack: architected the platform directly with the business owner; built **self-hosted video streaming from our own server** to cut costs and deliver performance-optimized playback. Courses platform for accounting, finance & statistics. Role: Full-Stack Software Engineer.
 
 **`04` Stack** — categorized matrix (mono category labels, not cards):
 - Languages: Python, SQL
@@ -94,7 +94,7 @@ Light, editorial, premium — "Direction A" from the visual brainstorm. Same des
 
 - No framework/build tooling, no CMS, no dark-mode toggle (light only), no blog, no contact-form backend (mailto link only), no analytics.
 
-## Open items to confirm during build
+## Resolved
 
-1. One-line description + your exact role on **Dr. Zakaria Academy**.
-2. Photo treatment acceptable (cropped + grayscale/duotone), or go type-only after seeing it.
+- **Dr. Zakaria Academy:** Full-Stack Software Engineer — architected with the business owner; self-hosted, cost-reducing, performance-optimized video streaming. (Filled into `03` Projects above.)
+- **Photo:** Use `assets/Ibrahim1.jpeg` as a temporary cropped + subtly toned portrait in About now; Ibrahim will swap a proper headshot later (one-line change).
